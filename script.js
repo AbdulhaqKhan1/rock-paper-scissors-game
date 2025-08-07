@@ -11,7 +11,7 @@ function handleChoice(userChoice) {
     return choices[randomIndex];
   }
 
-  let resultText = `You chose ${userChoice}<br>`;
+  let result = `You chose ${userChoice}<br>`;
     //In JavaScript, the += operator is known as the addition assignment operator. It is a shorthand for adding a value to a variable and then assigning the result back to that same variable
     
   result += `Bot chose ${bot}<br>`;
@@ -29,6 +29,8 @@ function handleChoice(userChoice) {
   } else {
     result += "Result: You lose!";
   }
+
+  console.log(result)
 
   document.getElementById("result").innerHTML = result;
 }
