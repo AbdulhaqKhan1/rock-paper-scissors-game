@@ -26,7 +26,7 @@ body {
 /* MEDIA QUERY FOR SMALL SCREENS */
 @media (max-width: 600px) {
     .choices {
-        flex-direction: column;
+        flex-direction: row;
         gap: 2em;
         width: 100%;
         align-items: center;
@@ -36,8 +36,8 @@ body {
     .rock,
     .paper,
     .scissors {
-        height: 6em;
-        width: 6em;
+        height: 10em;
+        width: 10em;
     }
 
     .text {
