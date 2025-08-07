@@ -30,7 +30,7 @@ function handleChoice(userChoice) {
     result += "Result: You lose!";
   }
 
-  console.log(result)
+  // console.log(result)
 
   document.getElementById("result").innerHTML = result;
 }
