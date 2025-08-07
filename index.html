@@ -18,3 +18,52 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+<!-- 
+
+
+    document.getElementById('rock').addEventListener("click", () => handleChoice("rock"));
+    document.getElementById('paper').addEventListener("click", () => handleChoice("paper"));
+    document.getElementById('scissors').addEventListener("click", () => handleChoice("scissors"));
+
+    function handleChoice(userChoice) {
+      const bot = botChoice();
+
+      alert("You chose " + userChoice);
+      alert("Bot chose " + bot);
+
+      if (bot === "rock") {
+        alert("Bot chose rock");
+      } else if (bot === "paper") {
+        alert("Bot chose paper");
+      } else if (bot === "scissors") {
+        alert("Bot chose scissors");
+      }
+
+      if (userChoice === bot) {
+        alert("It's a tie");
+      } else if (
+        (userChoice === "rock" && bot === "scissors") ||
+        (userChoice === "paper" && bot === "rock") ||
+        (userChoice === "scissors" && bot === "paper")
+      ) {
+        alert("You win");
+      } else {
+        alert("You lose");
+      }
+    }
+
+    function botChoice() {
+      const choices = ["rock", "paper", "scissors"];
+      const randomIndex = Math.floor(Math.random() * choices.length);
+      return choices[randomIndex];
+    }
+  </script>
+</body>
+</html> -->
