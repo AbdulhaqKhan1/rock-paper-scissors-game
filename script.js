@@ -13,23 +13,24 @@ function handleChoice(userChoice) {
 
   let resultText = `You chose ${userChoice}<br>`;
     //In JavaScript, the += operator is known as the addition assignment operator. It is a shorthand for adding a value to a variable and then assigning the result back to that same variable
-  resultText += `Bot chose ${bot}<br>`;
+    
+  result += `Bot chose ${bot}<br>`;
 
   if (userChoice === bot) {
-    resultText += "Result: <span style='color: orange;'>It's a tie!</span>";
+    result += "Result: It's a tie";
   } else if (
     (userChoice === "rock" && bot === "scissors") ||
     (userChoice === "paper" && bot === "rock") ||
     (userChoice === "scissors" && bot === "paper")
   ) {
 
-    resultText += "Result: You win";
+    result += "Result: You win";
 
   } else {
-    resultText += "Result: You lose!";
+    result += "Result: You lose!";
   }
 
-  document.getElementById("result").innerHTML = resultText;
+  document.getElementById("result").innerHTML = result;
 }
 
 
