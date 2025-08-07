@@ -1,12 +1,14 @@
-body{
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.text{
+.text {
     text-align: center;
+    font-size: 1.5em;
+    margin-top: 2em;
 }
 
-.choices{
+.choices {
     display: flex;
     gap: 5em;
     width: 30em;
@@ -14,23 +16,33 @@ body{
     margin-top: 5em;
 }
 
-.rock{
+.rock,
+.paper,
+.scissors {
     height: 10em;
     width: 10em;
 }
 
-.paper{
-    height: 10em;
-    width: 10em;
-}
+/* MEDIA QUERY FOR SMALL SCREENS */
+@media (max-width: 600px) {
+    .choices {
+        flex-direction: column;
+        gap: 2em;
+        width: 100%;
+        align-items: center;
+        margin-top: 3em;
+    }
 
-.scissors{
-    height: 10em;
-    width: 10em;
-}
+    .rock,
+    .paper,
+    .scissors {
+        height: 6em;
+        width: 6em;
+    }
 
-.text{
-    font-size: 1.5em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 2em;
+    .text {
+        font-size: 1.2em;
+        margin-top: 1em;
+        padding: 0 1em;
+    }
 }
