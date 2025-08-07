@@ -2,38 +2,35 @@ document.getElementById('rock').addEventListener("click", () => handleChoice("ro
 document.getElementById('paper').addEventListener("click", () => handleChoice("paper"));
 document.getElementById('scissors').addEventListener("click", () => handleChoice("scissors"));
 
-    function handleChoice(userChoice) {
-      const bot = botChoice();
-      
-    function botChoice() {
-      const choices = ["rock", "paper", "scissors"];
-      const randomIndex = Math.floor(Math.random() * choices.length);
-      return choices[randomIndex];
-    }
+function handleChoice(userChoice) {
+  const bot = botChoice(); 
 
-      alert("You chose " + userChoice);
-      alert("Bot chose " + bot);
+  function botChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+  }
 
-      if (bot === "rock") {
-        alert("Bot chose rock");
-      } else if (bot === "paper") {
-        alert("Bot chose paper");
-      } else if (bot === "scissors") {
-        alert("Bot chose scissors");
-      }
+  // alert("You chose " + userChoice);
+  // alert("Bot chose " + bot);
 
-      if (userChoice === bot) {
-        alert("It's a tie");
-      } else if (
-        (userChoice === "rock" && bot === "scissors") ||
-        (userChoice === "paper" && bot === "rock") ||
-        (userChoice === "scissors" && bot === "paper")
-      ) {
-        alert("You win");
-      } else {
-        alert("You lose");
-      }
-    }
+  let resultText = `You chose ${userChoice}<br>`;
+  resultText += `Bot chose <strong>${bot}</strong>.<br>`;
+
+  if (userChoice === bot) {
+    resultText += "Result: <span style='color: orange;'>It's a tie!</span>";
+  } else if (
+    (userChoice === "rock" && bot === "scissors") ||
+    (userChoice === "paper" && bot === "rock") ||
+    (userChoice === "scissors" && bot === "paper")
+  ) {
+    resultText += "Result: <span style='color: green;'>You win!</span>";
+  } else {
+    resultText += "Result: <span style='color: red;'>You lose!</span>";
+  }
+
+  document.getElementById("result").innerHTML = resultText;
+}
 
 
 
