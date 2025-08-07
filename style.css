@@ -1,0 +1,30 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text{
+    text-align: center;
+}
+
+.choices{
+    display: flex;
+    gap: 5em;
+    width: 30em;
+    margin: 0 auto;
+    margin-top: 5em;
+}
+
+.rock{
+    height: 10em;
+    width: 10em;
+}
+
+.paper{
+    height: 10em;
+    width: 10em;
+}
+
+.scissors{
+    height: 10em;
+    width: 10em;
+}
